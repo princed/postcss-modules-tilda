@@ -1,5 +1,5 @@
 const postcss = require('postcss')
-const matchImports = /^((?:.+?|\([\s\S]+?\))\s+from\s+)(['"])(\w+.*?)\2$/
+const matchImports = /^((?:.+?|\([\s\S]+?\))\s+from\s+)(['"])(@?\w+.*?)\2$/
 
 module.exports = postcss.plugin('postcss-modules-tilda', () => root => {
   root.walk(node => {

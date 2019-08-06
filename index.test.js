@@ -48,3 +48,10 @@ it('supports multiline imports', () => {
 ) from "~module/module.css";`
   )
 })
+
+it('supports imports from scoped packages', () => {
+  return run(
+    `@value module from "@scope/module/module.css"`,
+    `@value module from "~@scope/module/module.css"`
+  )
+})
