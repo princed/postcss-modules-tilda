@@ -55,3 +55,31 @@ it('supports imports from scoped packages', () => {
     `@value module from "~@scope/module/module.css"`
   )
 })
+
+it('adds tilda for namespaced global imports', () => {
+  return run(
+    `@import "@scope/module/module.css"`,
+    `@import "~@scope/module/module.css"`
+  )
+})
+
+it('adds tilda for modules global imports', () => {
+  return run(
+    `@import "module/module.css"`,
+    `@import "~module/module.css"`
+  )
+})
+
+it('doesn\'t change relative global imports', () => {
+  return run(
+    `@import "./module/module.css"`,
+    `@import "./module/module.css"`
+  )
+})
+
+it('doesn\'t change absolute global imports', () => {
+  return run(
+    `@import "/module/module.css"`,
+    `@import "/module/module.css"`
+  )
+})
