@@ -10,9 +10,11 @@
 Before:
 
 ```css
+@import "module/module.css";
 @value module from "module/module.css";
+
 a {
-  composes: module; 
+  composes: module;
   composes: selector from "module/module.css";
 }
 ```
@@ -20,8 +22,10 @@ a {
 After:
 
 ```css
+@import "~module/module.css";
 @value module from "~module/module.css";
-a { 
+
+a {
   composes: module;
   composes: selector from "~module/module.css";
 }
