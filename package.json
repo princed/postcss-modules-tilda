@@ -1,6 +1,6 @@
 {
   "name": "postcss-modules-tilda",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "PostCSS plugin to restore the way to resolve modules CSS Modules values paths that css-loader used before 1.0",
   "keywords": [
     "postcss",
