@@ -1,6 +1,6 @@
 /* eslint-env jest */
 const postcss = require('postcss');
-const plugin = require('./');
+const plugin = require('.');
 
 function run(input, output, opts) {
   return postcss([plugin(opts)]).process(input).then((result) => {
